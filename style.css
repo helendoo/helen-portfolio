@@ -1,5 +1,12 @@
 /* ===============  BASE STYLES & THEME  =============== */
 
+
+body {
+    transform: scale(0.85);
+    transform-origin: top center;
+}
+
+
 :root {
     --pink-light: #fce8f0;     /* page background */
     --pink-soft: #f9dce8;      /* alt sections */
@@ -78,10 +85,10 @@ body {
 /* big luxury name */
 .hero h1 {
     font-family: "Playfair Display", serif;
-    font-size: clamp(3.6rem, 7vw, 5.4rem);
+    font-size: clamp(2.8rem, 5.5vw, 4.4rem);
     font-weight: 600;
     letter-spacing: 0.04em;
-    line-height: 1.05;
+    line-height: 1.1;
     margin-bottom: 0.9rem;
     color: var(--text-main);
 }
@@ -766,18 +773,25 @@ body {
         display: block;
     }
 
-    /* Top buttons center */
-    .hero-buttons-top {
-        left: 50%;
-        transform: translateX(-50%);
-        top: 20px;
-        gap: 0.5rem;
-    }
-
-    .hero-buttons-top button {
-        padding: 0.4rem 1.1rem;
-        font-size: 0.9rem;
-    }
+/* Top buttons center */
+.hero-buttons-top {
+    position: fixed;
+    top: 12px;                 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.4rem;             
+    padding: 0.25rem 0.6rem;   
+    border-radius: 999px;
+    background: rgba(252, 232, 240, 0.9); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
 }
 
+.hero-buttons-top button {
+    padding: 0.3rem 0.9rem; 
+    font-size: 0.85rem;      
+    border-radius: 999px;
+}
+}
 
