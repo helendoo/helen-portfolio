@@ -765,6 +765,7 @@ body {
 /* Mobile layout tweaks */
 @media (max-width: 800px) {
 
+
     .hero {
         flex-direction: column;
         text-align: center;
@@ -788,24 +789,55 @@ body {
     }
 
 /* Top buttons center */
-.hero-buttons-top {
-    position: fixed;
-    top: 12px;                 
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 0.4rem;             
-    padding: 0.25rem 0.6rem;   
-    border-radius: 999px;
-    background: rgba(252, 232, 240, 0.9); 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-    z-index: 1000;
-}
+    .hero-buttons-top {
+        position: fixed;
+        top: 12px;                 
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 0.4rem;             
+        padding: 0.25rem 0.6rem;   
+        border-radius: 999px;
+        background: rgba(252, 232, 240, 0.9); 
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        z-index: 1000;
 
-.hero-buttons-top button {
-    padding: 0.3rem 0.9rem; 
-    font-size: 0.85rem;      
-    border-radius: 999px;
-}
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 95%;
+    }
+
+    .hero-buttons-top a {
+        flex-shrink: 0;
+    }   
+
+    .hero-buttons-top button {
+        padding: 0.3rem 0.9rem; 
+        font-size: 0.85rem;      
+        border-radius: 999px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 2.5rem 1.5rem;
+        border-radius: 24px;
+        gap: 2rem;
+    }
+
+
+    .hero-photo {
+        order: -1;
+        margin-right: 0;
+    }
+
+
+    .hero-photo img {
+        max-height: 260px;
+        width: auto;
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
+    }
 }
 
